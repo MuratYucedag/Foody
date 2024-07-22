@@ -18,8 +18,4 @@
     <ProjectReference Include="..\Foody.BusinessLayer\Foody.BusinessLayer.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Shared\_HeadLayoutComponentPartial\" />
-  </ItemGroup>
-
 </Project>
