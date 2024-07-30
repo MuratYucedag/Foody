@@ -29,5 +29,25 @@ namespace Foody.PresentationLayer.Controllers
             _categoryService.TInsert(category);
             return RedirectToAction("CategoryList");
         }
+
+        public IActionResult DeleteCategory(int id)
+        {
+            _categoryService.TDelete(id);
+            return RedirectToAction("CategoryList");
+        }
+
+        [HttpGet]
+        public IActionResult UpdateCategory(int id)
+        {
+            var value = _categoryService.TGetById(id);
+            return View(value);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateCategory(Category category)
+        {
+            _categoryService.TUpdate(category);
+            return RedirectToAction("CategoryList");
+        }
     }
 }

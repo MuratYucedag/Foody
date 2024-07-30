@@ -44,7 +44,7 @@
                                 <tr>
                                     <th scope="col">Category Id</th>
                                     <th scope="col">Category Name</th>
-                                    <th scope="col">Staus</th>
+                                    <th scope="col">Status</th>
                                     <th scope="col">Delete</th>
                                     <th scope="col">Update</th>
                                 </tr>
@@ -56,15 +56,15 @@
                                         <td>@item.CategoryId</td>
                                         <td>@item.CategoryName</td>
                                         <td>@item.CategoryStatus</td>
-                                        <td><a href="#" class="btn btn-danger">Delete</a></td>
-                                        <td><a href="#" class="btn btn-success">Update</a></td>
+                                        <td><a href="/Categories/DeleteCategory/@item.CategoryId" class="btn btn-danger">Delete</a></td>
+                                        <td><a href="/Categories/UpdateCategory/@item.CategoryId" class="btn btn-success">Update</a></td>
                                     </tr>
 
                                 }
 
                             </tbody>
                         </table>
-                        <a href="#" class="btn btn-primary">Add New Category</a>
+                        <a href="/Categories/CreateCategory/" class="btn btn-primary">Add New Category</a>
                     </div>
                 </div>
 
