@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Foody.BusinessLayer.Concrete
 {
-    public class ProductManager:IProductService
+    public class ProductManager : IProductService
     {
         private readonly IProductDal _productDal;
         public ProductManager(IProductDal ProductDal)
@@ -32,6 +32,12 @@ namespace Foody.BusinessLayer.Concrete
         {
             _productDal.Insert(entity);
         }
+
+        public List<Product> TProductListWithCategory()
+        {
+            return _productDal.ProductListWithCategory();
+        }
+
         public void TUpdate(Product entity)
         {
             _productDal.Update(entity);
