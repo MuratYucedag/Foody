@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace Foody.DataAccessLayer.EntityFramework
 {
-    public class EdSliderDal : GenericRepository<Slider>, ISliderDal
+    public class EfSliderDal : GenericRepository<Slider>, ISliderDal
     {
-        public EdSliderDal(FoodyContext context) : base(context)
+        public EfSliderDal(FoodyContext context) : base(context)
         {
         }
     }

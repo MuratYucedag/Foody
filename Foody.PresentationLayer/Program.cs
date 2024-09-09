@@ -3,6 +3,7 @@ using Foody.BusinessLayer.Concrete;
 using Foody.DataAccessLayer.Abstract;
 using Foody.DataAccessLayer.Context;
 using Foody.DataAccessLayer.EntityFramework;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,11 @@ builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
 builder.Services.AddScoped<IProductDal, EfProductDal>();
 builder.Services.AddScoped<IProductService, ProductManager>();
+
+builder.Services.AddScoped<ISliderDal, EfSliderDal>();
+builder.Services.AddScoped<ISliderService, SliderManager>();
+
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 builder.Services.AddControllersWithViews();
 
