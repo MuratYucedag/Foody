@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Foody.BusinessLayer.Concrete
 {
-    public class FeatureManager:IFeatureService
+    public class FeatureManager : IFeatureService
     {
         private readonly IFeatureDal _featureDal;
         public FeatureManager(IFeatureDal FeatureDal)
@@ -20,6 +20,12 @@ namespace Foody.BusinessLayer.Concrete
         {
             _featureDal.Delete(id);
         }
+
+        public List<Feature> TFeatureListByStatusTrue()
+        {
+            return _featureDal.FeatureListByStatusTrue();
+        }
+
         public List<Feature> TGetAll()
         {
             return _featureDal.GetAll();

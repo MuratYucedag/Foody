@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Foody.BusinessLayer.Abstract
 {
-    public interface IFeatureService:IGenericService<Feature>
+    public interface IFeatureService : IGenericService<Feature>
     {
+        List<Feature> TFeatureListByStatusTrue();
     }
 }
