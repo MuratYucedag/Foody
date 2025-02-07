@@ -29,6 +29,9 @@ builder.Services.AddScoped<IAboutItemService, AboutItemManager>();
 builder.Services.AddScoped<IFeatureDal, EfFeatureDal>();
 builder.Services.AddScoped<IFeatureService, FeatureManager>();
 
+builder.Services.AddScoped<IReviewService, ReviewManager>();
+builder.Services.AddScoped<IReviewDal, EfReviewDal>();
+
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 builder.Services.AddControllersWithViews();
